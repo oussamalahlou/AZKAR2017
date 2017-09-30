@@ -1,0 +1,77 @@
+# baseURI: null
+
+@prefix composite: <http://www.topbraid.org/2007/05/composite.owl#> .
+@prefix forms: <http://www.topbraid.org/2007/01/forms.owl#> .
+@prefix inference: <http://www.topbraid.org/2007/06/inference.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix visual: <http://topbraid.org/visual#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[
+  rdf:type forms:Form ;
+  forms:parentOf [
+      rdf:type forms:Section ;
+      forms:childIndex 0 ;
+      forms:parentOf [
+          rdf:type forms:PropertyWidgetGroup ;
+          forms:childIndex 0 ;
+          forms:predicateType owl:AnnotationProperty ;
+        ] ;
+      rdfs:label "Annotations" ;
+    ] ;
+  forms:parentOf [
+      rdf:type forms:Section ;
+      forms:childIndex 1 ;
+      forms:parentOf [
+          rdf:type forms:PropertyWidget ;
+          forms:childIndex 0 ;
+          forms:predicate rdfs:domain ;
+        ] ;
+      forms:parentOf [
+          rdf:type forms:PropertyWidget ;
+          forms:childIndex 1 ;
+          forms:predicate rdfs:range ;
+        ] ;
+      forms:parentOf [
+          rdf:type forms:PropertyWidget ;
+          forms:childIndex 2 ;
+          forms:predicate rdfs:subPropertyOf ;
+        ] ;
+      forms:parentOf [
+          rdf:type forms:PropertyWidget ;
+          forms:childIndex 3 ;
+          forms:predicate owl:equivalentProperty ;
+        ] ;
+      forms:parentOf [
+          rdf:type forms:PropertyWidget ;
+          forms:childIndex 4 ;
+          forms:predicate owl:inverseOf ;
+        ] ;
+      forms:parentOf [
+          rdf:type forms:PropertyWidget ;
+          forms:childIndex 5 ;
+          forms:predicate owl:propertyDisjointWith ;
+        ] ;
+      forms:parentOf [
+          rdf:type forms:PropertyWidget ;
+          forms:childIndex 6 ;
+          forms:predicate owl:propertyChainAxiom ;
+        ] ;
+      rdfs:label "Property Axioms" ;
+    ] ;
+  forms:parentOf [
+      rdf:type forms:Section ;
+      forms:childIndex 2 ;
+      forms:parentOf [
+          rdf:type forms:PropertyWidgetGroup ;
+          forms:childIndex 0 ;
+          forms:predicateType rdf:Property ;
+        ] ;
+      rdfs:label "Other Properties" ;
+    ] ;
+  forms:subjectType owl:ObjectProperty ;
+  forms:useDomain "true" ;
+  rdfs:label "Object Property Form" ;
+].

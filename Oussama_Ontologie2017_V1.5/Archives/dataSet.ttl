@@ -1,0 +1,304 @@
+# baseURI: http://azkar.musee_Ontology.fr/schema
+# imports: http://azkar.musee_Ontology.fr/amo
+# imports: http://purl.org/dc/elements/1.1/
+# prefix: amo
+
+@prefix amo: <http://azkar.musee_Ontology.fr/schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+<http://azkar.musee_Ontology.fr/amo#hasXPos>
+  rdfs:domain <http://azkar.musee_Ontology.fr/amo#MuseumPointOfInterest> ;
+. 
+<http://azkar.musee_Ontology.fr/amo#isLocatedInScene>
+  rdfs:domain <http://azkar.musee_Ontology.fr/amo#MuseumObject> ;
+. 
+<http://azkar.musee_Ontology.fr/schema>
+  rdf:type owl:Ontology ;
+  owl:imports <http://azkar.musee_Ontology.fr/amo> ;
+  owl:imports dc: ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+. 
+amo:Cavalier_Uhlan_A_CHEVAL_
+  rdf:type <http://azkar.musee_Ontology.fr/amo#Uniform> ;
+  <http://azkar.musee_Ontology.fr/amo#belongsToPeriod> "14-18"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasNationality> "Allemagne"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasPrefixMuseum> "8.24"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#isLocatedInScene> amo:Marne14 ;
+  rdfs:label "Cavalier Uhlan" ;
+. 
+amo:Culotte_Officier_Infanterie
+  rdf:type <http://azkar.musee_Ontology.fr/amo#MuseumObject> ;
+  <http://azkar.musee_Ontology.fr/amo#hasDomain> "Vie militaire"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasLength> "51"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#hasPrefixMuseum> "CAPM"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasWidth> "117"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#isLocatedInScene> amo:Marne14 ;
+  amo:inThePeriod "14-18"^^xsd:string ;
+  rdfs:label "Culotte Officier Infanterie" ;
+. 
+amo:Dolman_de_général_de_brigade
+  rdf:type <http://azkar.musee_Ontology.fr/amo#MuseumObject> ;
+  <http://azkar.musee_Ontology.fr/amo#hasDomain> "Vie militaire"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasFloraId> "2006.1.11866"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasLength> "51"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#hasPrefixMuseum> "CAPM"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasWidth> "7"^^xsd:decimal ;
+  amo:inThePeriod "14-18"^^xsd:string ;
+  rdfs:label "Dolman de général de brigade" ;
+. 
+amo:Fantassin_britannique
+  rdf:type <http://azkar.musee_Ontology.fr/amo#Uniform> ;
+  <http://azkar.musee_Ontology.fr/amo#hasNationality> "UK"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasPrefixMuseum> "8.27"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#isLocatedInScene> amo:Marne14 ;
+  rdfs:label "Fantassin Britanique" ;
+. 
+amo:General_Infanterie
+  rdf:type <http://azkar.musee_Ontology.fr/amo#Uniform> ;
+  <http://azkar.musee_Ontology.fr/amo#ComposedOf> amo:Culotte_Officier_Infanterie ;
+  <http://azkar.musee_Ontology.fr/amo#ComposedOf> amo:Dolman_de_général_de_brigade ;
+  <http://azkar.musee_Ontology.fr/amo#ComposedOf> amo:Kepi ;
+  <http://azkar.musee_Ontology.fr/amo#hasNationality> "France"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasPrefixMuseum> "8.4"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#isLocatedInScene> amo:Marne14 ;
+  rdfs:label "Général Infanterie" ;
+. 
+amo:Grenadier_Belge
+  rdf:type <http://azkar.musee_Ontology.fr/amo#Uniform> ;
+  <http://azkar.musee_Ontology.fr/amo#hasNationality> "Belgique"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasPrefixMuseum> "8.1"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#isLocatedInScene> amo:Marne14 ;
+  rdfs:label "Grenadier Belge" ;
+. 
+amo:Kepi
+  rdf:type <http://azkar.musee_Ontology.fr/amo#MuseumObject> ;
+  <http://azkar.musee_Ontology.fr/amo#hasDomain> "Vie militaire"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasFloraId> "2006.1.256"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasLength> "6665"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#hasPrefixMuseum> "CAPM"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasWidth> "17"^^xsd:decimal ;
+  rdfs:label "Kepi" ;
+. 
+amo:La_tranchee
+  rdf:type <http://azkar.musee_Ontology.fr/amo#MuseumScene> ;
+  <http://azkar.musee_Ontology.fr/amo#ComposedOf> amo:Mitrailleuse_de_Saint_Etienne ;
+  <http://azkar.musee_Ontology.fr/amo#ComposedOf> amo:Mortier_de_tranchée ;
+  <http://azkar.musee_Ontology.fr/amo#hasBoundingBox> amo:Point_1 ;
+  <http://azkar.musee_Ontology.fr/amo#hasDescription> "la scène de la  tranchée est une reproduction en miniature d'une tranchée francaise en face d'une tranchée allemande, séparée par un no man's land"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasHistoricalMessage> "protections contre le feu de l ennemi, les tranchées deviennent un lieu de vie pendant quatre ans pour des millions d hommes.Au début de la guerre de position, les Français pensent que la guerre va très vite se terminer et gardent l esprit offensif.Leurs tranchées sont peu ou pas organisées, elles sont censées n être que provisoires.Du côté des Allemands, c’est l inverse, les tranchées sont un lieu de vie qu’il convient d’aménager pour durer dans le temps.Cette différence se retrouve à travers le mépris que les Français, qui changent souvent de secteur, ont pour leurs lieux de vie, alors que les Allemands, plus sédentaires, sont plus vigilants àl aménagement et au respect de leurs tranchées.Il faudra donc du temps pour que l’état-major français prenne conscience de l’importance des tranchées et donne des instructions pour creuser, étayer, aménager… les positions.L aménagement des tranchées est dans aucun doute le reflet de la mentalité de ses occupants"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#linkedToExtMedia> amo:pictureOfLatranchee;
+  <http://azkar.musee_Ontology.fr/amo#hasRadius> "3"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#hasSceneNumber> 8 ;
+  <http://azkar.musee_Ontology.fr/amo#linkedToExtMedia> amo:videoOfLatranchee;
+  dc:title "Tranchée"^^xsd:string ;
+. 
+amo:videoOfLatranchee
+   rdf:type <http://azkar.musee_Ontology.fr/amo#externalMedia> ;
+   <http://azkar.musee_Ontology.fr/amo#hasURI> "https://www.youtube.com/embed/iCMYIsdWeyM"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#isMediaType> "Video"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#linkedToScene> amo:La_tranchee;
+   <http://azkar.musee_Ontology.fr/amo#isDescribe> "Historical"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#hasSource> "Youtube"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#hasMetric> "3"^^xsd:decimal;
+   <http://azkar.musee_Ontology.fr/amo#hasMetric> "duration(mn)"^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasLabel> "La tranchee"^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasExtMediaName> "videoOfLatranchee" ^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasExtMediaComment> "Video that describes the scene of la tranchee in the first World War "^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#linkedToScene> amo:La_tranchee;
+. 
+amo:pictureOfLatranchee
+   rdf:type <http://azkar.musee_Ontology.fr/amo#externalMedia> ;
+   <http://azkar.musee_Ontology.fr/amo#hasURI> "http://www.editions-delcourt.fr/images/couvertures/14-18-tome-04-la-tranchee-perdue-avril-1915.jpg"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#isMediaType> "Picture"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#linkedToScene> amo:La_tranchee;
+   <http://azkar.musee_Ontology.fr/amo#isDescribe> "Historical"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#hasSource> "Picture"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#hasMetric> "233"^^xsd:decimal;
+   <http://azkar.musee_Ontology.fr/amo#hasMetric> "Length (KO)"^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasLabel> "La tranchee"^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasExtMediaName> "pictureOfLatranchee" ^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasExtMediaComment> "Bd first world war"^^xsd:string;
+. 
+amo:Marne14
+  rdf:type <http://azkar.musee_Ontology.fr/amo#MuseumScene> ;
+  <http://azkar.musee_Ontology.fr/amo#hasBoundingBox> amo:Point_2 ;
+  <http://azkar.musee_Ontology.fr/amo#hasDescription> "Le 3 septembre 1914, Gallieni apprend que les troupes allemandes changent de direction, tout à la poursuite des armées françaises et du corps expéditionnaire anglais.Une partie de l’armée allemande prend le risque de manœuvrer au nord de Paris et présente dangereusement son flanc droit.Pour Gallieni, la chance est unique, une attaque s’impose.Il s’organise pour attaquer le lendemain.Reste à convaincre Joffrecar l’enjeu est décisif.Une décision trop rapide,un mauvais choix et le résultat serait funeste.Mais Joffre se décide.La bataille ne se fera pas derrière la Seine mais bien devant Paris."^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#linkedToExtMedia> amo:pictureOfMarne14 ;
+  <http://azkar.musee_Ontology.fr/amo#hasRadius> "8"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#hasSceneNumber> "7"^^xsd:integer ;
+  <http://azkar.musee_Ontology.fr/amo#linkedToExtMedia> amo:videoOfMarne14;
+  <http://azkar.musee_Ontology.fr/amo#linkedToExtMedia> amo:webPageOfMarne14;
+  <http://azkar.musee_Ontology.fr/amo#linkedToExtMedia> amo:wikipediaMarne14;
+  <http://azkar.musee_Ontology.fr/amo#linkedToExtMedia> amo:dbpediaMarne14;
+  dc:title "Marne 14"^^xsd:string ;
+. 
+amo:dbpediaMarne14
+   rdf:type <http://azkar.musee_Ontology.fr/amo#externalMedia> ;
+   <http://azkar.musee_Ontology.fr/amo#hasURI> "http://fr.dbpedia.org/page/Bataille_de_la_Marne_(1914)"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#isMediaType> "dbpedia"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#linkedToScene> amo:Marne14;
+   <http://azkar.musee_Ontology.fr/amo#isDescribe> "Historical"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#hasSource> "dbpedia"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#hasMetric> ""^^xsd:decimal;
+   <http://azkar.musee_Ontology.fr/amo#hasMetric> ""^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasLabel> "Marne14"^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasExtMediaName> "Battle of the Marne" ^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasExtMediaComment> "First Battle of the marne"^^xsd:string;
+. 
+amo:wikipediaMarne14
+   rdf:type <http://azkar.musee_Ontology.fr/amo#externalMedia> ;
+   <http://azkar.musee_Ontology.fr/amo#hasURI> "https://en.wikipedia.org/wiki/First_Battle_of_the_Marne"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#isMediaType> "wikipedia"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#linkedToScene> amo:Marne14;
+   <http://azkar.musee_Ontology.fr/amo#isDescribe> "Historical"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#hasSource> "wikipedia"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#hasMetric> ""^^xsd:decimal;
+   <http://azkar.musee_Ontology.fr/amo#hasMetric> ""^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasLabel> "Marne14"^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasExtMediaName> "Battle of the Marne" ^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasExtMediaComment> "First Battle of the marne"^^xsd:string;
+. 
+amo:webPageOfMarne14
+   rdf:type <http://azkar.musee_Ontology.fr/amo#externalMedia> ;
+   <http://azkar.musee_Ontology.fr/amo#hasURI> "http://www.humanite.fr/bataille-de-la-marne-195-000-morts-et-la-boucherie-durera-quatre-ans-557168"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#isMediaType> "webPage"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#linkedToScene> amo:Marne14;
+   <http://azkar.musee_Ontology.fr/amo#isDescribe> "Historical"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#hasSource> "web"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#hasMetric> ""^^xsd:decimal;
+   <http://azkar.musee_Ontology.fr/amo#hasMetric> ""^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasLabel> "Marne14"^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasExtMediaName> "Battle of the Marne: 195,000 dead...and the butcher will last four years" ^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasExtMediaComment> "Battle of the marne"^^xsd:string;
+. 
+amo:videoOfMarne14
+   rdf:type <http://azkar.musee_Ontology.fr/amo#externalMedia> ;
+   <http://azkar.musee_Ontology.fr/amo#hasURI> "https://www.youtube.com/embed/iCMYIsdWeyM"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#isMediaType> "Video"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#linkedToScene> amo:Marne14;
+   <http://azkar.musee_Ontology.fr/amo#isDescribe> "Historical"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#hasSource> "Youtube"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#hasMetric> "3"^^xsd:decimal;
+   <http://azkar.musee_Ontology.fr/amo#hasMetric> "duration(mn)"^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasLabel> "Marne14"^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasExtMediaName> "1914 : La bataille de la Marne, premier tournant de la Grande Guerre" ^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasExtMediaComment> "Battle of the marne"^^xsd:string;
+. 
+amo:pictureOfMarne14
+   rdf:type <http://azkar.musee_Ontology.fr/amo#externalMedia> ;
+   <http://azkar.musee_Ontology.fr/amo#hasURI> "http://www.bir-hacheim.com/wp-content/uploads/2009/10/La-Marne-1914-Georges-Blond.jpg"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#isMediaType> "Picture"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#linkedToScene> amo:Marne14;
+   <http://azkar.musee_Ontology.fr/amo#isDescribe> "Historical"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#hasSource> "Picture"^^xsd:string ;
+   <http://azkar.musee_Ontology.fr/amo#hasMetric> "42"^^xsd:decimal;
+   <http://azkar.musee_Ontology.fr/amo#hasMetric> "Length KO"^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasLabel> "Marne14"^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasExtMediaName> "La-Marne-1914-Georges-Blond" ^^xsd:string;
+   <http://azkar.musee_Ontology.fr/amo#hasExtMediaComment> "Battle of the marne"^^xsd:string;
+. 
+amo:Mitrailleuse_de_Saint_Etienne
+  rdf:type <http://azkar.musee_Ontology.fr/amo#MuseumObject> ;
+  <http://azkar.musee_Ontology.fr/amo#hasDomain> "vie militaire"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasFloraId> "2006.1.13623"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasLength> "54"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#hasPrefixMuseum> "CAPM"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasWidth> "147"^^xsd:decimal ;
+  rdfs:label "Mitrailleuse de Saint Etienne" ;
+. 
+amo:Mortier_de_tranchée
+  rdf:type <http://azkar.musee_Ontology.fr/amo#MuseumObject> ;
+  <http://azkar.musee_Ontology.fr/amo#hasDomain> "Vie militaire"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasFloraId> "2006.1.6514"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasLength> "34"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#hasPrefixMuseum> "CAPM"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasWidth> "46"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#isLocatedInScene> amo:La_tranchee ;
+  rdfs:label "Mortier de Tranchée" ;
+. 
+amo:MuseumPointOfInterset_1
+  rdf:type <http://azkar.musee_Ontology.fr/amo#MuseumPointOfInterest> ;
+  <http://azkar.musee_Ontology.fr/amo#LinkedTo> amo:Marne14 ;
+  <http://azkar.musee_Ontology.fr/amo#hasName> "Point d'interet 1"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasOrientation> 0.2 ;
+  <http://azkar.musee_Ontology.fr/amo#hasXPos> "5"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#hasYPos> "7"^^xsd:decimal ;
+. 
+amo:MuseumPointOfInterset_2
+  rdf:type <http://azkar.musee_Ontology.fr/amo#MuseumPointOfInterest> ;
+  <http://azkar.musee_Ontology.fr/amo#LinkedTo> amo:Marne14 ;
+  <http://azkar.musee_Ontology.fr/amo#hasName> "Point d'interet 2"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasOrientation> 0.5 ;
+  <http://azkar.musee_Ontology.fr/amo#hasXPos> "7"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#hasYPos> "3"^^xsd:decimal ;
+. 
+amo:Officier_Infanterie
+  rdf:type <http://azkar.musee_Ontology.fr/amo#Uniform> ;
+  <http://azkar.musee_Ontology.fr/amo#ComposedOf> amo:Pantalon_Culotte_M ;
+  <http://azkar.musee_Ontology.fr/amo#ComposedOf> amo:Tunique ;
+  <http://azkar.musee_Ontology.fr/amo#ComposedOf> amo:VareuseOfficierInfanterie ;
+  <http://azkar.musee_Ontology.fr/amo#hasNationality> "France"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasPrefixMuseum> "8.3"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#isLocatedInScene> amo:Marne14 ;
+  rdfs:label "Officier Infanterie" ;
+. 
+amo:POI_1
+  rdf:type <http://azkar.musee_Ontology.fr/amo#boxing> ;
+  amo:linkedTo amo:La_tranchee ;
+. 
+amo:POI_2
+  rdf:type <http://azkar.musee_Ontology.fr/amo#boxing> ;
+  amo:linkedTo amo:La_tranchee ;
+. 
+amo:POI_3
+  rdf:type <http://azkar.musee_Ontology.fr/amo#boxing> ;
+  amo:linkedTo amo:La_tranchee ;
+. 
+amo:POI_4
+  rdf:type <http://azkar.musee_Ontology.fr/amo#boxing> ;
+  amo:linkedTo amo:Marne14 ;
+. 
+amo:Pantalon_Culotte_M
+  rdf:type <http://azkar.musee_Ontology.fr/amo#MuseumObject> ;
+  <http://azkar.musee_Ontology.fr/amo#hasDomain> "Vie militaire"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasFloraId> "2006.1.11748"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasLength> "1"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#hasPrefixMuseum> "CAPM"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasWidth> "1"^^xsd:decimal ;
+  amo:inThePeriod "14-18"^^xsd:string ;
+  rdfs:label "Pantalon Culotte" ;
+. 
+amo:Point_1
+  rdf:type <http://azkar.musee_Ontology.fr/amo#BoundingBox> ;
+  <http://azkar.musee_Ontology.fr/amo#boundingBoxXsize> "5"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#boundingBoxYsize> "5"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#hasRadius> "3"^^xsd:decimal ;
+. 
+amo:Point_2
+  rdf:type <http://azkar.musee_Ontology.fr/amo#BoundingBox> ;
+  <http://azkar.musee_Ontology.fr/amo#boundingBoxXsize> "12"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#boundingBoxYsize> "6"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#hasRadius> "7"^^xsd:decimal ;
+. 
+amo:Tunique
+  rdf:type <http://azkar.musee_Ontology.fr/amo#MuseumObject> ;
+  <http://azkar.musee_Ontology.fr/amo#hasDomain> "Vie militaire"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasFloraId> "2006.1.11750"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasLength> "6"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#hasPrefixMuseum> "CAPM"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasWidth> "7"^^xsd:decimal ;
+  rdfs:label "Tunique" ;
+. 
+amo:VareuseOfficierInfanterie
+  rdf:type <http://azkar.musee_Ontology.fr/amo#MuseumObject> ;
+  <http://azkar.musee_Ontology.fr/amo#hasDomain> "Vie militaire"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasFloraId> "2006.1.11866"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasLength> "10"^^xsd:decimal ;
+  <http://azkar.musee_Ontology.fr/amo#hasPrefixMuseum> "CAPM"^^xsd:string ;
+  <http://azkar.musee_Ontology.fr/amo#hasWidth> "9"^^xsd:decimal ;
+  amo:inThePeriod "14-18"^^xsd:string ;
+  rdfs:label "Vareuse Officier Infanterie" ;
+. 

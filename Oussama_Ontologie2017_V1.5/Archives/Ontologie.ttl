@@ -1,0 +1,320 @@
+# baseURI: http://azkar.musee_Ontology.fr/amo
+# imports: http://purl.org/dc/elements/1.1/
+# prefix: amo
+
+@prefix amo: <http://azkar.musee_Ontology.fr/amo#> .
+@prefix arg: <http://spinrdf.org/arg#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://azkar.musee_Ontology.fr/amo>
+  rdf:type owl:Ontology ;
+  owl:imports dc: ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+amo:BoundingBox
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+amo:ComposedOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain amo:MuseumScene ;
+  rdfs:domain amo:Uniform ;
+  rdfs:range amo:MuseumObject ;
+.
+amo:LinkedToPOI
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain amo:MuseumPointOfInterest ;
+  rdfs:range amo:MuseumScene ;
+.
+amo:MuseumMap
+  rdf:type owl:Class ;
+  dc:title "Map" ;
+  rdfs:subClassOf owl:Thing ;
+.
+amo:MuseumObject
+  rdf:type owl:Class ;
+  rdfs:comment "Classe décrivant un objet du musée" ;
+  rdfs:label "Objet du musée" ;
+.
+amo:MuseumPointOfInterest
+  rdf:type owl:Class ;
+  rdfs:comment "Classe représentant un point d'observation (Point of interest)" ;
+  rdfs:label "Point d'interet" ;
+  rdfs:subClassOf owl:Thing ;
+.
+amo:MuseumScene
+  rdf:type owl:Class ;
+  rdfs:comment "Classe représente une scène dans un musée" ;
+  rdfs:label "Scene" ;
+.
+amo:MuseumTrail
+  rdf:type owl:Class ;
+  dc:title "Visite" ;
+  rdfs:subClassOf owl:Thing ;
+.
+amo:ObjectDimension
+  rdf:type owl:Class ;
+  rdfs:comment "Classe représentant les dimensions physique d'un objet au sein du musée" ;
+  rdfs:label "Dimensions d'un objet" ;
+  rdfs:subClassOf owl:Thing ;
+.
+amo:Uniform
+  rdf:type owl:Class ;
+  rdfs:comment "Classe représentant l'uniforme porté par un mannequin du musée" ;
+  rdfs:label "Uniforme" ;
+  rdfs:subClassOf amo:MuseumObject ;
+.
+amo:Weapon
+  rdf:type owl:Class ;
+  rdfs:comment "Classe représentant une arme" ;
+  rdfs:label "Arme" ;
+  rdfs:subClassOf amo:MuseumObject ;
+.
+amo:belongsToPeriod
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Property representing the period to which an object belongs in the museum" ;
+  rdfs:comment "Propriété représentant la typologie à laquelle appartient  un objet dans le musée" ;
+  rdfs:domain amo:MuseumObject ;
+  rdfs:label "Typologie" ;
+  rdfs:range xsd:string ;
+.
+amo:boundingBoxXsize
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain amo:BoundingBox ;
+  rdfs:range xsd:decimal ;
+.
+amo:boundingBoxYsize
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain amo:BoundingBox ;
+  rdfs:range xsd:decimal ;
+.
+amo:externalMedia
+  rdf:type owl:Class ;
+  rdfs:comment "Class representing the external media of a scene" ;
+  rdfs:label "External Media" ;
+  rdfs:subClassOf owl:Thing ;
+.
+amo:hasBoundingBox
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain amo:MuseumScene ;
+  rdfs:range amo:BoundingBox ;
+.
+amo:hasDbpedia
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Propriété représentant une base de données Dbpedia concernant la scéne " ;
+  rdfs:domain amo:MuseumScene ;
+  rdfs:label "Dbpedia" ;
+  rdfs:range xsd:string ;
+.
+amo:hasDescription
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "cette propriété permet de décrire une scène" ;
+  rdfs:comment "this property is used to describe a scene" ;
+  rdfs:domain amo:MuseumScene ;
+  rdfs:label "Description" ;
+  rdfs:range xsd:string ;
+.
+amo:hasDomain
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Property representing the domain that owns an object in the museum" ;
+  rdfs:comment "Propriété représentant le nom de domaine auquel appartient un objet dans le musée" ;
+  rdfs:domain amo:MuseumObject ;
+  rdfs:domain amo:ObjectDimension ;
+  rdfs:label "Domaine" ;
+  rdfs:range xsd:string ;
+.
+amo:hasExtMediaComment
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Comment of the media" ;
+  rdfs:domain amo:externalMedia ;
+  rdfs:range xsd:string ;
+.
+amo:hasExtMediaName
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The name of the media" ;
+  rdfs:domain amo:externalMedia ;
+  rdfs:range xsd:string ;
+.
+amo:hasFloraId
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Property representing the number of the object in the database FLORA" ;
+  rdfs:comment "Propriété représentant le numéro de l'objet dans la base FLORA" ;
+  rdfs:domain amo:MuseumObject ;
+  rdfs:label "Numéro d'inventaire" ;
+  rdfs:range xsd:string ;
+.
+amo:hasId
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Property representing the number of an object in the museum" ;
+  rdfs:comment "Propriété représentant le numéro idientifiant un objet dans le musée" ;
+  rdfs:domain amo:MuseumMap ;
+  rdfs:domain amo:MuseumObject ;
+  rdfs:domain amo:MuseumTrail ;
+  rdfs:label "Identifiant" ;
+.
+amo:hasLabel
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Label of the media" ;
+  rdfs:domain amo:externalMedia ;
+  rdfs:range xsd:string ;
+.
+amo:hasLength
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Propriété représentant la longeur de l'éspace qu'occupe l'objet dans le musée" ;
+  rdfs:domain amo:MuseumMap ;
+  rdfs:domain amo:MuseumObject ;
+  rdfs:domain amo:ObjectDimension ;
+  rdfs:label "Longueur" ;
+  rdfs:range xsd:decimal ;
+.
+amo:hasMap
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain amo:MuseumTrail ;
+  rdfs:range amo:MuseumMap ;
+.
+amo:hasMetric
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Metric of the media" ;
+  rdfs:domain amo:externalMedia ;
+  rdfs:range xsd:decimal ;
+  rdfs:range xsd:string ;
+.
+amo:hasName
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Nom du Point d'intérêt" ;
+  rdfs:comment "Point of interest name" ;
+  rdfs:domain amo:MuseumObject ;
+  rdfs:domain amo:MuseumPointOfInterest ;
+  rdfs:label "Nom" ;
+  rdfs:range xsd:string ;
+.
+amo:hasNationality
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "L'origine de l'uniforme" ;
+  rdfs:comment "origin of the uniform" ;
+  rdfs:domain amo:Uniform ;
+  rdfs:label "Origine" ;
+  rdfs:range xsd:string ;
+.
+amo:hasOrientation
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Angle d'orientation" ;
+  rdfs:comment "orientation angle" ;
+  rdfs:domain amo:MuseumPointOfInterest ;
+  rdfs:label "Téta" ;
+  rdfs:range xsd:decimal ;
+.
+
+amo:hasPrefixMuseum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Propriété représentant le préfixe du musée auquel l'objet appartient" ;
+  rdfs:domain amo:MuseumObject ;
+  rdfs:label "Préfixe" ;
+  rdfs:range xsd:string ;
+.
+amo:hasRadius
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain amo:BoundingBox ;
+  rdfs:range xsd:decimal ;
+.
+amo:hasResolution
+  rdf:type owl:DatatypeProperty ;
+  dc:title "Resolution" ;
+  rdfs:domain amo:MuseumMap ;
+  rdfs:range xsd:decimal ;
+.
+amo:hasSceneNumber
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "cette propriété représente le numéro d'une scène dans le musée" ;
+  rdfs:comment "this property represents the number of a scene in the museum" ;
+  rdfs:domain amo:MuseumScene ;
+  rdfs:label "Numéro de scéne" ;
+  rdfs:range xsd:integer ;
+.
+amo:hasSource
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The source of the media" ;
+  rdfs:domain amo:externalMedia ;
+  rdfs:range xsd:string ;
+.
+amo:hasStartPositionOffset
+  rdf:type owl:DatatypeProperty ;
+  dc:title "Map" ;
+  rdfs:domain amo:MuseumMap ;
+  rdfs:range xsd:decimal ;
+.
+amo:hasTrail
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain amo:MuseumScene ;
+  rdfs:range amo:MuseumTrail ;
+.
+
+amo:hasWidth
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Propriété représente la largeur de l'espace occupé par l'objet dans le musée" ;
+  rdfs:domain amo:MuseumMap ;
+  rdfs:domain amo:MuseumObject ;
+  rdfs:domain amo:ObjectDimension ;
+  rdfs:label "Largeur" ;
+  rdfs:range xsd:decimal ;
+.
+
+amo:hasXPos
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Position X" ;
+  rdfs:domain amo:MuseumPointOfInterest ;
+  rdfs:label "X" ;
+  rdfs:range xsd:decimal ;
+.
+amo:hasYPos
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Position Y" ;
+  rdfs:domain amo:MuseumPointOfInterest ;
+  rdfs:label "Y" ;
+  rdfs:range xsd:decimal ;
+.
+amo:isDescribe
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Description of the media" ;
+  rdfs:domain amo:externalMedia ;
+  rdfs:range xsd:string ;
+.
+amo:isLocatedInScene
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "La relation entre un uniforme et une scène : Un uniforme est situé dans une scène" ;
+  rdfs:comment "The relationship between a uniform and a scene" ;
+  rdfs:domain amo:MuseumObject ;
+  rdfs:range amo:MuseumScene ;
+.
+amo:isMediaType
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Type of media" ;
+  rdfs:domain amo:externalMedia ;
+  rdfs:range xsd:string ;
+.
+amo:linkedToScene
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Scenes of external media" ;
+  rdfs:domain amo:externalMedia ;
+  rdfs:range amo:MuseumScene ;
+.
+amo:linkedToExtMedia
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "External Media of Scenes" ;
+  rdfs:domain amo:MuseumScene ;
+  rdfs:range amo:externalMedia ;
+.
+ amo:hasURI
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "URI of the media" ;
+  rdfs:domain amo:externalMedia ;
+  rdfs:range xsd:string ;
+.
+
